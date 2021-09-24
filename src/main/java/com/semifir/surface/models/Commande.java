@@ -2,7 +2,6 @@ package com.semifir.surface.models;
 
 import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,7 +24,7 @@ public class Commande {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
-	@OneToMany(cascade = CascadeType.REMOVE)
+	@OneToMany()
 	private Set<Produit> produits;
 	
 	@ManyToOne

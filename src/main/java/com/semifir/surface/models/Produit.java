@@ -1,6 +1,5 @@
 package com.semifir.surface.models;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,7 +28,7 @@ public class Produit {
 	@Column(name= "prix")
 	private Float prix;
 	
-	@ManyToOne(cascade = CascadeType.REMOVE)
+	@ManyToOne()
 	@JoinColumn(name = "categorie_id", referencedColumnName = "id")
 	private Categorie categorie;
 	
