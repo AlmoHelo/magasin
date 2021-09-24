@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.semifir.surface.models.Client;
+import com.semifir.surface.models.Commande;
 import com.semifir.surface.services.ClientService;
 
 
@@ -55,4 +56,8 @@ public class ClientController {
 		this.clientService.delete(id);
 	}
 	
+	@GetMapping("{id}/commandes")
+	public List<Commande> findCommandes(@PathVariable Long id){
+		return this.clientService.findCommandes(id);
+	}
 }
