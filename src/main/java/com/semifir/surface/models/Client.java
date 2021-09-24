@@ -30,6 +30,4 @@ public class Client {
 	@Column(name = "prenom")
 	private String prenom;
 	
-	@OneToMany(cascade = CascadeType.REMOVE)
-	private Set<Commande> commandes;
 }

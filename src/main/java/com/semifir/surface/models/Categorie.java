@@ -27,6 +27,4 @@ public class Categorie {
 	@Column(name = "nom")
 	private String nom;
 	
-	@OneToMany(cascade = CascadeType.REMOVE)
-	private Set<Produit> produits;
 }

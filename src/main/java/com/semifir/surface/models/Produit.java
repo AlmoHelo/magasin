@@ -33,7 +33,4 @@ public class Produit {
 	@JoinColumn(name = "categorie_id", referencedColumnName = "id")
 	private Categorie categorie;
 	
-	@ManyToOne
-	@JoinColumn(name="commande_id", referencedColumnName = "id")
-	private Commande commande;
 }
