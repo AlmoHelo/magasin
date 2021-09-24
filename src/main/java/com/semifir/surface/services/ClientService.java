@@ -3,6 +3,7 @@ package com.semifir.surface.services;
 import java.util.List;
 
 import com.semifir.surface.models.Client;
+import com.semifir.surface.models.Commande;
 
 public interface ClientService {
 
@@ -15,5 +16,7 @@ public interface ClientService {
 	Client update(Client client);
 
 	void delete(Long id);
+
+	List<Commande> findCommandes(Long id);
 
 }
